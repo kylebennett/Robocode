@@ -9,8 +9,11 @@ First off download and install Robocode - http://robowiki.net/wiki/Robocode/Down
 Then clone this repo.
 
 You can create your bot using either the editor in robocode or in a java IDE such as eclipse.
+http://robowiki.net/wiki/Robocode/My_First_Robot
 
-Test your bot in the arena against the robocode sample bots
+Test your bot in the arena against the robocode sample bots.
+
+Put your bot in the relevant folder then push to the online repo.
 
 ## Uploading a Bot
 
@@ -30,7 +33,7 @@ Head to head competitions will be run using roboleague. Each bot will go head to
 
 *TOTAL MAYHEM*
 
-Every single bot entered is thrown into the arena, last man standing wins. 
+Every single bot entered is thrown into the arena, winner is the bot with the most points at the end of 5 rounds. 
 
 ## General Rules
 
@@ -45,4 +48,5 @@ Every single bot entered is thrown into the arena, last man standing wins.
 ## Useful Links
 
 http://robocode.sourceforge.net/
+http://robowiki.net/wiki/Robocode/My_First_Robot
 
