@@ -18,11 +18,17 @@ public class TheGruffalo extends Robot {
 
         while (true) {
 
+            ahead(100);
+            turnGunLeft(360);
+
+            turnLeft(90);
         }
     }
 
     @Override
     public void onScannedRobot(ScannedRobotEvent event) {
+
+        fire(2);
 
     }
 
