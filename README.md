@@ -51,3 +51,12 @@ http://robocode.sourceforge.net/
 
 http://robowiki.net/wiki/Robocode/My_First_Robot
 
+http://mark.random-article.com/weber/java/robocode/
+
+http://robowiki.net/wiki/Robocode_Basics
+
+http://robowiki.net/wiki/Robocode/Eclipse
+
+http://robowiki.net/wiki/Robocode/Running_from_Eclipse
+
+http://robowiki.net/wiki/Robocode/My_First_Robot
