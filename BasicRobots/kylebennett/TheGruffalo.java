@@ -21,7 +21,7 @@ public class TheGruffalo extends Robot {
             ahead(100);
             turnGunLeft(360);
 
-            turnLeft(90);
+            turnLeft(180);
         }
     }
 

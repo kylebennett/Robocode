@@ -1,0 +1,464 @@
+===== League Results =====
+
+Battlefield Size - 1200 x 400
+Robots per Battle - 2
+Rounds per Battle - 6
+
+===== Robots =====
+
+	sample - Corners
+	sample - Crazy
+	sample - Fire
+	sample - RamFire
+	sample - SpinBot
+	sample - Target
+	sample - Tracker
+	sample - Walls
+
+===== Battles =====
+
+	Walls : 1895
+	Tracker : 1282
+	RamFire : 1104
+	Target : 302
+
+	Tracker : 1552
+	Corners : 1493
+	Crazy : 1300
+	Fire : 568
+
+	Tracker : 1875
+	RamFire : 1029
+	Crazy : 851
+	Fire : 816
+
+	Tracker : 2576
+	Corners : 1733
+	Fire : 498
+	Target : 250
+
+	SpinBot : 2230
+	Crazy : 757
+	Fire : 660
+	Corners : 519
+
+	RamFire : 1345
+	Corners : 1136
+	Walls : 983
+	Crazy : 919
+
+	Tracker : 1667
+	SpinBot : 1615
+	RamFire : 1297
+	Target : 308
+
+	Walls : 2014
+	SpinBot : 1218
+	Tracker : 972
+	Corners : 390
+
+	Walls : 1867
+	Tracker : 1361
+	RamFire : 849
+	Fire : 682
+
+	Walls : 1662
+	Tracker : 1269
+	RamFire : 676
+	Crazy : 581
+
+	Walls : 2525
+	Tracker : 1639
+	Corners : 760
+	Target : 101
+
+	SpinBot : 1992
+	Tracker : 1304
+	RamFire : 1061
+	Corners : 742
+
+	SpinBot : 1902
+	Tracker : 1290
+	Crazy : 801
+	Corners : 588
+
+	Tracker : 1770
+	Walls : 1701
+	Corners : 784
+	Fire : 775
+
+	SpinBot : 2030
+	Corners : 1144
+	Crazy : 987
+	Target : 1
+
+	Fire : 1804
+	RamFire : 1170
+	Corners : 1054
+	Tracker : 1006
+
+	Walls : 2354
+	Tracker : 912
+	Crazy : 691
+	Target : 0
+
+	Walls : 1792
+	RamFire : 1482
+	Crazy : 737
+	Target : 57
+
+	Fire : 2000
+	Crazy : 1328
+	Corners : 1221
+	Target : 52
+
+	Walls : 2047
+	RamFire : 1231
+	SpinBot : 973
+	Corners : 249
+
+	Corners : 2072
+	RamFire : 1338
+	Crazy : 1259
+	Target : 111
+
+	Walls : 1777
+	Tracker : 1291
+	RamFire : 1025
+	Corners : 892
+
+	Walls : 2770
+	Fire : 1451
+	Corners : 394
+	Target : 250
+
+	Tracker : 1556
+	Walls : 1294
+	Corners : 888
+	Crazy : 640
+
+	Tracker : 2735
+	RamFire : 1177
+	Fire : 946
+	Target : 206
+
+	Walls : 1775
+	SpinBot : 1126
+	Crazy : 693
+	Corners : 402
+
+	Tracker : 2742
+	Crazy : 1018
+	Fire : 514
+	Target : 201
+
+	Walls : 1773
+	Tracker : 1398
+	Crazy : 752
+	Fire : 344
+
+	Walls : 2361
+	SpinBot : 1068
+	Corners : 507
+	Fire : 466
+
+	Tracker : 1993
+	RamFire : 1385
+	Crazy : 775
+	Corners : 747
+
+	SpinBot : 1763
+	Tracker : 1624
+	Fire : 903
+	RamFire : 820
+
+	Walls : 1918
+	SpinBot : 1451
+	Corners : 774
+	Target : 200
+
+	Walls : 1389
+	RamFire : 1339
+	SpinBot : 892
+	Fire : 745
+
+	Fire : 2222
+	RamFire : 1231
+	Crazy : 1162
+	Target : 158
+
+	SpinBot : 2531
+	Corners : 1017
+	RamFire : 996
+	Target : 250
+
+	Fire : 1594
+	Crazy : 1100
+	RamFire : 1089
+	Corners : 929
+
+	Walls : 2200
+	Crazy : 956
+	Fire : 673
+	Target : 1
+
+	SpinBot : 1508
+	RamFire : 1114
+	Fire : 863
+	Crazy : 834
+
+	Walls : 1962
+	RamFire : 1539
+	Corners : 816
+	Target : 305
+
+	Walls : 2096
+	SpinBot : 1333
+	Fire : 497
+	Target : 151
+
+	Walls : 1833
+	Tracker : 967
+	SpinBot : 814
+	Crazy : 236
+
+	Walls : 1901
+	SpinBot : 1194
+	Crazy : 536
+	Fire : 134
+
+	Walls : 1978
+	SpinBot : 1148
+	Crazy : 696
+	Target : 2
+
+	RamFire : 2390
+	Crazy : 1152
+	SpinBot : 980
+	Target : 154
+
+	SpinBot : 2341
+	Fire : 808
+	Crazy : 735
+	Target : 100
+
+	Walls : 2574
+	Crazy : 906
+	Corners : 585
+	Target : 151
+
+	Walls : 2351
+	Crazy : 804
+	Fire : 749
+	Corners : 274
+
+	Walls : 2023
+	SpinBot : 1242
+	Tracker : 1005
+	Target : 50
+
+	SpinBot : 1999
+	RamFire : 1659
+	Fire : 947
+	Target : 205
+
+	Walls : 1776
+	Crazy : 858
+	RamFire : 737
+	Fire : 589
+
+	SpinBot : 1637
+	Fire : 1350
+	RamFire : 915
+	Corners : 854
+
+	Walls : 1514
+	RamFire : 1001
+	SpinBot : 901
+	Tracker : 859
+
+	SpinBot : 2320
+	Tracker : 1818
+	Corners : 732
+	Target : 150
+
+	SpinBot : 2103
+	Tracker : 1826
+	Crazy : 619
+	Target : 1
+
+	Tracker : 2143
+	Corners : 1705
+	RamFire : 1275
+	Target : 256
+
+	Fire : 2526
+	RamFire : 1360
+	Corners : 1121
+	Target : 256
+
+	Walls : 1483
+	RamFire : 1385
+	SpinBot : 719
+	Crazy : 598
+
+	Walls : 1899
+	Fire : 1324
+	RamFire : 1223
+	Target : 207
+
+	Walls : 1562
+	SpinBot : 1319
+	RamFire : 1302
+	Target : 154
+
+	Tracker : 1486
+	SpinBot : 1233
+	RamFire : 1040
+	Crazy : 811
+
+	Tracker : 2181
+	RamFire : 1398
+	Crazy : 1035
+	Target : 256
+
+	Walls : 2213
+	Tracker : 1659
+	Fire : 502
+	Target : 50
+
+	Walls : 1852
+	SpinBot : 1112
+	Tracker : 1029
+	Fire : 231
+
+	SpinBot : 2151
+	Tracker : 1331
+	Corners : 772
+	Fire : 554
+
+	SpinBot : 2575
+	Fire : 970
+	Corners : 828
+	Target : 102
+
+	SpinBot : 1853
+	Tracker : 1329
+	Crazy : 895
+	Fire : 238
+
+	Walls : 2243
+	RamFire : 971
+	Fire : 892
+	Corners : 637
+
+	Tracker : 2220
+	Crazy : 1240
+	Corners : 783
+	Target : 281
+
+	SpinBot : 2460
+	Tracker : 1855
+	Fire : 350
+	Target : 200
+
+	SpinBot : 2164
+	RamFire : 855
+	Corners : 836
+	Crazy : 684
+
+	Tracker : 1068
+	Target : 2
+
+	SpinBot : 703
+	Crazy : 74
+
+	SpinBot : 1081
+	Tracker : 589
+
+	Walls : 1073
+	Target : 2
+
+	SpinBot : 1028
+	Corners : 80
+
+	Walls : 1048
+	Fire : 168
+
+	Fire : 1102
+	RamFire : 926
+
+	Walls : 744
+	SpinBot : 16
+
+	Walls : 590
+	Crazy : 86
+
+	Corners : 652
+	Crazy : 166
+
+	Fire : 857
+	Corners : 446
+
+	Walls : 1027
+	RamFire : 350
+
+	Corners : 1176
+	RamFire : 728
+
+	RamFire : 1183
+	SpinBot : 671
+
+	Tracker : 1148
+	Fire : 116
+
+	Fire : 1067
+	Target : 0
+
+	Tracker : 1269
+	RamFire : 767
+
+	Corners : 1050
+	Target : 0
+
+	SpinBot : 1055
+	Fire : 48
+
+	Fire : 602
+	Crazy : 344
+
+	Walls : 1076
+	Tracker : 1
+
+	SpinBot : 1073
+	Target : 1
+
+	Tracker : 1406
+	Corners : 680
+
+	RamFire : 1206
+	Target : 12
+
+	Walls : 1135
+	Corners : 278
+
+	Crazy : 880
+	Target : 121
+
+	RamFire : 798
+	Crazy : 351
+
+	Tracker : 853
+	Crazy : 276
+
+
+===== Final Scores =====
+
+	Walls : 6693
+	Tracker : 6334
+	RamFire : 5958
+	SpinBot : 5627
+	Corners : 4362
+	Fire : 3960
+	Crazy : 2177
+	Target : 138
