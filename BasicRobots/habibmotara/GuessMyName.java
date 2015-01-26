@@ -32,9 +32,9 @@ public class GuessMyName extends Robot {
 		while(true) {
 			// Replace the next 4 lines with any behavior you would like
 			ahead(100);
-			turnGunRight(360);
+			turnGunRight(90);
 			turnLeft(100);
-			turnGunLeft(360);
+			turnGunLeft(90);
 			}
 	}
 
@@ -48,24 +48,19 @@ public class GuessMyName extends Robot {
 
 	    @Override
 	    public void onHitByBullet(HitByBulletEvent event) {
-
+	    	back(10);
 	    }
 
 	    @Override
 	    public void onHitRobot(HitRobotEvent event) {
-	    	fire(1);
 			back(100);
+			fire(1);
 
 	    }
 
 	    @Override
 	    public void onHitWall(HitWallEvent event) {
-	    	back(50);
-	    }
-
-	    @Override
-	    public void onWin(WinEvent event) {
-
+	    	back(20);
 	    }	
 	
 }
