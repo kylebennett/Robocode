@@ -18,6 +18,8 @@ import robocode.WinEvent;
 public class TheGruffalo extends Robot {
 
     private byte moveDirection = 1;
+    private double moveDistance = 100;
+	private double adjustment = 3;
 
     @Override
     public void run() {
@@ -30,14 +32,14 @@ public class TheGruffalo extends Robot {
         setAdjustRadarForGunTurn(true);
 
         while (true) {
-
+        	
             // switch directions every 30 turns
-            if (getTime() % 30 == 0) {
+            if (getTime() % 10 == 0) {
                 moveDirection *= -1;
             }
 
             // Move in a hexagonal pattern
-            ahead(75);
+            ahead(moveDistance);
             turnRadarLeft(360 * moveDirection);
             turnLeft(60 * moveDirection);
         }
@@ -45,19 +47,26 @@ public class TheGruffalo extends Robot {
 
     @Override
     public void onScannedRobot(ScannedRobotEvent event) {
-
-        // If I can fire...
-        if (canFire(event)) {
-
-            // turn the gun to the scanned robot
-            turnGun(event.getBearing());
-
-            // and fire!
-            fire(2);
-        }
+    	
+    	double turnAmount = getGunTurnAmount(event.getBearing());
+    	
+    	turnAmount = (turnAmount > 0 && event.getVelocity() > 0) ? turnAmount + adjustment  : turnAmount - adjustment;
+    	
+    	turnGunRight(turnAmount);
+    	
+    	if(canFire()){
+    		fire(2);
+    	}
     }
+    
+	private double getGunTurnAmount(double bearing) {
+		
+		double absoluteBearing = getHeading() + bearing;
+    	return normalRelativeAngleDegrees(absoluteBearing - 
+    	    getGunHeading());
+	}
 
-    private boolean canFire(ScannedRobotEvent event) {
+    private boolean canFire() {
 
         // if the gun heat is 0 fire, otherwise don't waste the turn
         if (getGunHeat() == 0 && getEnergy() > 20) {
@@ -78,13 +87,13 @@ public class TheGruffalo extends Robot {
     public void onHitRobot(HitRobotEvent event) {
 
         // turn the gun to the other bot
-        turnGun(event.getBearing());
+    	getGunTurnAmount(event.getBearing());
 
         // point blank shot!
         fire(3);
 
         // back up
-        back(20);
+        back(moveDistance);
 
         // scan to see if its still there
         turnRadarLeft(360 * moveDirection);
@@ -95,22 +104,18 @@ public class TheGruffalo extends Robot {
 
         // Turn away from the wall... I think
         double turnAmt = normalRelativeAngleDegrees(event.getBearing());
+        
         turnLeft(turnAmt);
 
         // move away
-        ahead(100);
+        ahead(moveDistance);
         turnRadarLeft(360 * moveDirection);
     }
-
-    public void turnGun(double bearing) {
-
-        // turn the gun to point at the other bot
-        double gunTurnAmt = normalRelativeAngleDegrees(bearing + (getHeading() - getGunHeading()));
-        turnGunRight(gunTurnAmt);
-    }
-
+        
     private void setColour() {
-        setColors(Color.ORANGE, Color.BLUE, Color.ORANGE, Color.BLUE, Color.BLUE);
+    	
+    	Color ginger = new Color(240, 170, 10);
+        setColors(ginger, Color.BLUE, ginger);
     }
 
     @Override
