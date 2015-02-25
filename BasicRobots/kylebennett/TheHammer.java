@@ -9,6 +9,7 @@ import robocode.HitByBulletEvent;
 import robocode.HitRobotEvent;
 import robocode.HitWallEvent;
 import robocode.Robot;
+import robocode.RobotDeathEvent;
 import robocode.ScannedRobotEvent;
 
 /**
@@ -19,47 +20,60 @@ public class TheHammer extends Robot {
 
 	private int turnDirection = 1;
 
+	private String currentTarget = null;
+
 	@Override
 	public void run() {
-		
-		Color purple = new Color(125, 60, 160);
+
+		final Color purple = new Color(125, 60, 160);
 		setColors(purple, purple, purple);
 
-		while(true){
+		while (true) {
 			turnRight(30 * turnDirection);
-		}		
+		}
 	}
-	
+
 	@Override
 	public void onScannedRobot(ScannedRobotEvent event) {
 
-		turnDirection = event.getBearing() >=0 ? 1 : -1; 
-		turnRight(event.getBearing());
-		
-		ahead(event.getDistance() + 10);
-		
-		scan();
+		if (currentTarget == null) {
+			currentTarget = event.getName();
+		}
+
+		if (currentTarget.equals(event.getName())) {
+
+			turnDirection = event.getBearing() >= 0 ? 1 : -1;
+			turnRight(event.getBearing() * turnDirection);
+
+			ahead(event.getDistance() + 10);
+
+			scan();
+		}
 	}
-	
+
 	@Override
 	public void onHitByBullet(HitByBulletEvent event) {
 
-		super.onHitByBullet(event);
 	}
 
 	@Override
 	public void onHitRobot(HitRobotEvent event) {
 
-		turnDirection = event.getBearing() >=0 ? 1 : -1; 
+		turnDirection = event.getBearing() >= 0 ? 1 : -1;
 		turnRight(event.getBearing());
-		fire(2);
+		fire(3);
 	}
 
 	@Override
 	public void onHitWall(HitWallEvent event) {
-		// TODO Auto-generated method stub
-		super.onHitWall(event);
+
 	}
 
+	@Override
+	public void onRobotDeath(RobotDeathEvent event) {
 
+		if (event.getName().equals(currentTarget)) {
+			currentTarget = null;
+		}
+	}
 }
