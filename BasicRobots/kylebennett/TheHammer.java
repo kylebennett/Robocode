@@ -36,7 +36,11 @@ public class TheHammer extends Robot {
 	@Override
 	public void onScannedRobot(ScannedRobotEvent event) {
 
-		if (currentTarget == null) {
+		final boolean theGruffalo = event.getName().contains("TheGruffalo")
+				&& getOthers() > 1;
+
+		if (currentTarget == null && !theGruffalo) {
+
 			currentTarget = event.getName();
 		}
 
@@ -59,9 +63,14 @@ public class TheHammer extends Robot {
 	@Override
 	public void onHitRobot(HitRobotEvent event) {
 
-		turnDirection = event.getBearing() >= 0 ? 1 : -1;
-		turnRight(event.getBearing());
-		fire(3);
+		final boolean theGruffalo = event.getName().contains("TheGruffalo")
+				&& getOthers() > 1;
+
+		if (!theGruffalo) {
+			turnDirection = event.getBearing() >= 0 ? 1 : -1;
+			turnRight(event.getBearing());
+			fire(3);
+		}
 	}
 
 	@Override
