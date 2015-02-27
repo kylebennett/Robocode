@@ -6,6 +6,7 @@ import robocode.HitWallEvent;
 import robocode.Robot;
 import robocode.ScannedRobotEvent;
 import robocode.WinEvent;
+import java.awt.Color;
 
 /**
  * This robot extends a basic robot.
@@ -21,70 +22,100 @@ import robocode.WinEvent;
  *
  * - back(distance); move backwards, distance in pixels
  *
- * - turnLeft(degrees); / turnRight(degrees); turn your bot to the left or right
+ * - turnLeft(degrees); / turnRight(degrees); turn my bot to the left or right
  *
- * - turnGunLeft(degrees); / turnGunRight(degrees); turn your gun to the left or right
+ * - turnGunLeft(degrees); / turnGunRight(degrees); turn my gun to the left or right
  *
- * - turnRadarLeft(degrees); / turnRadarRight(degrees); turn your radar left or right
+ * - turnRadarLeft(degrees); / turnRadarRight(degrees); turn my radar left or right
  *
  * Shooting
  *
  * - fire(power); fire a bullet
  *
  */
-public class Roboanu extends Robot {
-
+public class RoboAnu extends Robot {
+    
     /**
-     * The default behaviour of your bot goes in this method.
+     * The default behaviour of my bot goes in this method.
      */
     @Override
     public void run() {
-
+        setColors(Color.CYAN,Color.ORANGE,Color.pink);
+        
+        
         while (true) {
-
-            ahead(1000);
-
+            
+            ahead(500);
+            turnGunRight(360);
+            back(500);
+            turnRadarLeft(90);
+            
         }
     }
-
+    
+    
     /**
-     * Called when your bot scans another bot.
+     * Called when my bot scans another bot.
      */
     @Override
     public void onScannedRobot(ScannedRobotEvent event) {
-
+        
+        if (event.getDistance() < 50 && getEnergy() > 50) {
+            fire(3);
+        }
+        else {
+            fire(1);
+        }
+        // Call scan again, before we turn the gun
+        scan();
+        
     }
-
+    
     /**
-     * Called when your bot is hit by a bullet.
+     * Called when my bot is hit by a bullet.
      */
     @Override
     public void onHitByBullet(HitByBulletEvent event) {
-
+        turnLeft(90 - event.getBearing()); //Turn perpendicular to the bullet to avoid future shots
+        turnRight(200);
+        
     }
-
+    
     /**
-     * Called when your bot ccrashes into another bot.
+     * Called when my bot crashes into another bot.
      */
     @Override
     public void onHitRobot(HitRobotEvent event) {
-
+        back(50);
+        fire(2);
+        turnLeft(100);
+        fire(1);
+        
     }
-
+    
     /**
-     * Called when your bot crashes into a wall.
+     * Called when my bot crashes into a wall.
      */
     @Override
     public void onHitWall(HitWallEvent event) {
-
+        back(20);
+        turnRight(90 - event.getBearing());
+        ahead(300);
+        
+        fire(1);
+        
     }
-
+    
     /**
-     * Called when your bot wins... Do a little victory dance.
+     * Called when my bot wins... Do a little victory dance.
      */
     @Override
     public void onWin(WinEvent event) {
-
+        turnLeft(10);
+        turnRight(10);
+        turnGunRight(360);
+        System.out.println("YEAH!! I won");
+        
     }
-
+    
 }
