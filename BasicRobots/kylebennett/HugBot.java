@@ -16,7 +16,7 @@ import robocode.ScannedRobotEvent;
  * @author kylebennett
  *
  */
-public class TheHammer extends Robot {
+public class HugBot extends Robot {
 
 	private int turnDirection = 1;
 
