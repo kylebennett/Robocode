@@ -48,7 +48,7 @@ public class TheGruffalo extends Robot {
 	@Override
 	public void onScannedRobot(ScannedRobotEvent event) {
 
-		final boolean theHammer = event.getName().contains("TheHammer")
+		final boolean theHammer = event.getName().contains("HugBot")
 				&& getOthers() > 1;
 
 		if (!theHammer) {
@@ -92,7 +92,7 @@ public class TheGruffalo extends Robot {
 	@Override
 	public void onHitRobot(HitRobotEvent event) {
 
-		final boolean theHammer = event.getName().contains("TheHammer")
+		final boolean theHammer = event.getName().contains("HugBot")
 				&& getOthers() > 1;
 
 		if (!theHammer) {
